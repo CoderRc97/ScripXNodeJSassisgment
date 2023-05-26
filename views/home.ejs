@@ -1,0 +1,40 @@
+<h5 class="text-center mt-3">All Movies List</h5>
+
+<div class="container mt-4">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">IMDB Title.</th>
+            <th scope="col">Name</th>
+            <th scope="col">Year</th>
+            <th scope="col">Released date</th>
+            <th scope="col">Genre</th>
+            <th scope="col">Duration</th>
+            <th scope="col">Language</th>
+            <th scope="col">Description</th>
+            <th scope="col">Reviews from Users</th>
+            <th scope="col">Reviews from critics</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <% for(let i = 0; i<movies.length; i++) {%>
+            <tr>
+              
+              <td> <%= movies[i].imdb_title_id%> </td>
+              <td> <%= movies[i].original_title%> </td>
+              <td> <%= movies[i].year%> </td>
+              <td> <%= movies[i].date_published%> </td>
+              <td> <%= movies[i].genre%> </td>
+              <td> <%= movies[i].duration%> </td>
+              <td> <%= movies[i].language%> </td>
+              <td> <%= movies[i].description%> </td>
+              <td> <%= movies[i].reviews_from_users%> </td>
+              <td> <%= movies[i].reviews_from_critics%> </td>
+
+            </tr>  
+          <%}%>
+          
+        </tbody>
+      </table>
+</div>
